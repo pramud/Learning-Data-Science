@@ -14,4 +14,13 @@ result$Discount. <- NULL
 result$Featured.in. <- NULL
 View(result)
 result$page <- NULL
+result$cleanedVotes <- sapply(strsplit(as.character(result$votes), " "), function(x) x[1])
+View(result)
+summary(result$cleanedVotes)
+result$cleanedVotes <- as.numeric(result$cleanedVotes)
+summary(result$cleanedVotes)
+result$cleanedNoOfRevs <- sapply(strsplit(as.character(result$noOfReviews), " "), function(x) x[1])
+View(result)
+summary(result$cleanedNoOfRevs)
+result$cleanedNoOfRevs <- as.numeric(result$cleanedNoOfRevs)
 
