@@ -23,4 +23,8 @@ result$cleanedNoOfRevs <- sapply(strsplit(as.character(result$noOfReviews), " ")
 View(result)
 summary(result$cleanedNoOfRevs)
 result$cleanedNoOfRevs <- as.numeric(result$cleanedNoOfRevs)
+result$costForTwo <- sapply(gsub("(\u20b9)","",result$Cost.for.two.), function(x) x[1])
+View(result)
+result$costForTwo <- sapply(gsub(",","",result$costForTwo), function(x) x[1])
+View(result)
 
