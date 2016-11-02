@@ -29,4 +29,8 @@ result$costForTwo <- sapply(gsub(",","",result$costForTwo), function(x) x[1])
 View(result)
 c <- ggplot(result, aes(factor(place)))
 c + geom_bar() + coord_flip()
+result$p =strsplit(as.character(result$place), ',')
+result$cleanedPlace <- sapply(strsplit(as.character(result$place), ", "), function(x) ifelse(match(x[[1]][2],NA),x[[1]][1],x[[1]][2]))
+result$cleanedPlace <- sapply(strsplit(as.character(result$place), ", "), function(x) print(x[[1]]))
+# have to change this
 
