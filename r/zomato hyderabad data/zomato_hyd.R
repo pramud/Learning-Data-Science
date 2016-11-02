@@ -27,4 +27,6 @@ result$costForTwo <- sapply(gsub("(\u20b9)","",result$Cost.for.two.), function(x
 View(result)
 result$costForTwo <- sapply(gsub(",","",result$costForTwo), function(x) x[1])
 View(result)
+c <- ggplot(result, aes(factor(place)))
+c + geom_bar() + coord_flip()
 
