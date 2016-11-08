@@ -12,3 +12,6 @@ plot(cylinders , mpg , col="red", varwidth =T)
 #The hist() function can be used to plot a histogram
 hist(mpg)
 summary(mpg)
+names(Auto)
+pairs(Auto)
+
