@@ -10,3 +10,10 @@ predicting the target class on the training dataset but fail miserably when face
 new data, that is, our model does not have the generalization power. That is why it is
 so important to evaluate our methods on previously unseen data'''
 
+'''The general rule is that, in order to avoid overfitting, we should prefer simple (that
+is, with less parameters) methods, something that could be seen as an instantiation
+of the philosophical principle of Occam's razor, which states that among competing
+hypotheses, the hypothesis with the fewest assumptions should be selected.
+However, we should also take into account Einstein's words:
+"Everything should be made as simple as possible, but not simpler."'''
+
