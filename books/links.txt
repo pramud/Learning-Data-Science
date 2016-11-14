@@ -1,1 +1,1 @@
-1) file:///D:/vasinpramu/Downloads/programming.collective.intelligence.aug.2007.pdf 
+1) https://raw.githubusercontent.com/gasgas4/002_MachineLearning_eBook/master/Learning%20scikit-learn%2C%20Machine%20Learning%20in%20Python%20-%20Ra%C3%BAl%20Garreta.pdf
