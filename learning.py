@@ -35,3 +35,8 @@ that is, on problems which have a lot of features to learn from. They are also v
 effective when the data is sparse (think about a high-dimensional space with very
 few instances). Besides, they are very efficient in terms of memory storage, since only
 a subset of the points in the learning space is used to represent the decision surfaces.'''
+
+'''To mention some disadvantages, SVM models could be very calculation intensive
+while training the model and they do not return a numerical indicator of how
+confident they are about a prediction. However, we can use some techniques such as
+K-fold cross-validation to avoid this, at the cost of increasing the computational cost.'''
