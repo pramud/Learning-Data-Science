@@ -17,3 +17,14 @@ hypotheses, the hypothesis with the fewest assumptions should be selected.
 However, we should also take into account Einstein's words:
 "Everything should be made as simple as possible, but not simpler."'''
 
+'''The idem curse of dimensionality may suggest that we keep our models simple,
+but on the other hand, if our model is too simple we run the risk of suffering
+from underfitting. Underfitting problems arise when our model has such a low
+representation power that it cannot model the data even if we had all the training
+data we want. We clearly have underfitting when our algorithm cannot achieve good
+performance measures even when measuring on the training set.'''
+
+'''As a result, we will have to achieve a balance between overfitting and underfitting.
+This is one of the most important problems that we will have to address when
+designing our machine learning models.'''
+
