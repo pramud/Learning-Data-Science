@@ -40,3 +40,21 @@ a subset of the points in the learning space is used to represent the decision s
 while training the model and they do not return a numerical indicator of how
 confident they are about a prediction. However, we can use some techniques such as
 K-fold cross-validation to avoid this, at the cost of increasing the computational cost.'''
+
+
+'''SVM IN R E
+
+We will focus on the last block of R code that generates the metric multidimensional scaling (MDS) of the distances separating the 150 flowers calculated from sepal and petal length and width (i.e., the dist function applied to the first four columns of the iris data). Species plays no role in the MDS with the flowers positioned in a two-dimensional space in order to reproduce the pairwise Euclidean distances. However, species is projected onto the plot using color, and the observations acting as support vectors are indicated with plus signs (+).
+
+The setosa flowers are represented by black circles and black plus signs. These points are separated along the first dimension from the versicolor species in red and virginica in green. The second dimension, on the other hand, seems to reflect some within-species sources of differences that do not differentiate among the three iris types.
+
+We should recall that the dist function calculates pairwise distances in the original space without any kernel transformation. The support vectors, on the other hand, were identified from the svm function using a radial kernel and then projected back onto the original observation space. Of course, we can change the kernel, which defaults to “radial” as in this example from the R package. A linear kernel may do just as well with the iris data, as you can see by adding kernel=”linear” to the svm function in the above code.
+
+
+It appears that we do not need all 150 flowers in order to identify the iris species. We know this because the svm function correctly classifies over 97% of the flowers with 51 support vectors (also called “landmarks” as noted in my last post Seeing Similarity in More Intricate Dimensions). The majority of the +’s are located between the two species with the greatest overlap. I have included the pictures so that the similarity of the red and green categories is obvious. This is where there will be confusion, and this is where the only misclassifications occur. If your iris is a setosa, your identification task is relatively easy and over quickly. But suppose that your iris resembles those in the cluster of red and green pluses between versicolor and virginica. This is where the finer distinctions are being made.
+
+By design, this analysis was kept brief to draw an analogy between support vector machines and finder guides that we have all used to identify unknown plants and animals in the wild. Hopefully, it was a useful comparison that will help you understand how we classify new observations by measuring their distances in a kernel metric from a more limited set of support vectors (a type of global positioning with a minimal number of landmarks or exemplars as satellites).
+
+When you are ready with your own data, you can view the videos from Chapter 9 of An Introduction to Statistical Learning with Applications in R to get a more complete outline of all the steps involved. My intent was simply to disrupt the feature mindset that relies on the cumulative contributions of separate attributes (e.g., the relative impact of each independent variable in a prediction equation). As objects become more complex, we stop seeing individual aspects and begin to bundle features into types or categories. We immediately recognize the object by its feature configuration, and these exemplars or landmarks become the new basis for our support vector representation.
+
+'''
