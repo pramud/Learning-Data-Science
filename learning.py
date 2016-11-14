@@ -28,3 +28,10 @@ performance measures even when measuring on the training set.'''
 This is one of the most important problems that we will have to address when
 designing our machine learning models.'''
 
+'''SVM has become one of the state-of-the-art machine learning models for many tasks
+with excellent results in many practical applications. One of the greatest advantages
+of SVM is that they are very effective when working on high-dimensional spaces,
+that is, on problems which have a lot of features to learn from. They are also very
+effective when the data is sparse (think about a high-dimensional space with very
+few instances). Besides, they are very efficient in terms of memory storage, since only
+a subset of the points in the learning space is used to represent the decision surfaces.'''
