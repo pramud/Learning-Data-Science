@@ -59,3 +59,15 @@ standardization of values (which does not change their distribution, as you coul
 verify by plotting the X values before and after scaling) is a common requirement of
 machine learning methods, to avoid that features with large values may weight too
 much on the final results.'''
+
+#PLOTTING
+
+import matplotlib.pyplot as plt
+colors = ['red', 'greenyellow', 'blue']
+for i in xrange(len(colors)):
+  xs = X_train[:, 0][y_train == i]
+  ys = X_train[:, 1][y_train == i]
+  plt.scatter(xs, ys, c=colors[i])
+plt.legend(iris.target_names)
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
