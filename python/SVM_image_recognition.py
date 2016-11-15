@@ -77,3 +77,21 @@ evaluate_cross_validation(svc_1, X_train, y_train, 5)
 '''Cross-validation with five folds, obtains pretty good results (accuracy of 0.933). In a
 few steps we obtained a face classifier.'''
 
+'''We will also define a function to perform training on the training set and evaluate
+the performance on the testing set.'''
+
+from sklearn import metrics
+def train_and_evaluate(clf, X_train, X_test, y_train, y_test):
+  clf.fit(X_train, y_train)
+  print "Accuracy on training set:"
+  print clf.score(X_train, y_train)
+  print "Accuracy on testing set:"
+  print clf.score(X_test, y_test)
+  y_pred = clf.predict(X_test)
+  print "Classification Report:"
+  print metrics.classification_report(y_test, y_pred)
+  print "Confusion Matrix:"
+  print metrics.confusion_matrix(y_test, y_pred)
+
+#If we train and evaluate, the classifier performs the operation with almost no errors.
+train_and_evaluate(svc_1, X_train, X_test, y_train, y_test)
