@@ -27,3 +27,16 @@ the set of instances (we will import all of them).'''
 
 from sklearn.datasets import fetch_20newsgroups
 news = fetch_20newsgroups(subset='all')
+
+print type(news.data), type(news.target), type(news.target_names)
+print news.target_names
+print len(news.data)
+print len(news.target)
+
+'''If you look at, say, the first instance, you will see the content of a newsgroup
+message, and you can get its corresponding category:'''
+
+print news.data[0]
+print news.target[0], news.target_names[news.target[0]]
+
+'''Preprocessing the data'''
