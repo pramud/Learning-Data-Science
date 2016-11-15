@@ -39,3 +39,5 @@ def print_faces(images, target, top_n):
     # label the image with the target value
     p.text(0, 14, str(target[i]))
     p.text(0, 60, str(i))
+    
+print_faces(faces.images, faces.target, 20)
