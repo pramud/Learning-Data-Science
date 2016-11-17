@@ -1,4 +1,6 @@
-result <- read.csv("~/GitHub/Scraping-Zomato/src/result.csv", encoding = "UTF-8")
+library(plotly)
+library(readr)
+result <- read_csv("~/GitHub/Learning-Data-Science/r/zomato hyderabad data/result.csv")
 View(result)
 summary(result$Upcoming.)
 result$Upcoming. <- NULL
@@ -34,3 +36,4 @@ c + geom_bar() + coord_flip()
 #result$cleanedPlace <- sapply(strsplit(as.character(result$place), ", "), function(x) print(x[[1]]))
 # have to change this
 result$costForTwo <- as.numeric(result$costForTwo)
+
