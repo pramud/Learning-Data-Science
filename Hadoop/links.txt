@@ -1,0 +1,1 @@
+ftp://public.dhe.ibm.com/software/de/pdf/Hadoop_for_dummies.pdf
